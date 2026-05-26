@@ -1,0 +1,32 @@
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: serif
+#+HTML_HEAD: <style>.reveal{font-size:26px !important;}</style>
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+
+#+TITLE: Class 1 · First Dart Program — Variables & Logic
+#+AUTHOR: Shafiqur Rahman
+
+* Welcome — This Is Day One
+#+ATTR_REVEAL: :frag (appear)
+  - This is the very first class of App Development with Flutter & AI
+  - By the end of this course you will have a real app published on Google Play Store and BDapps
+  - Today we dive straight into Dart, the language that powers Flutter
+
+* Dart Fundamentals — Variables, Types & Control Flow
+#+ATTR_REVEAL: :frag (appear)
+  - Master variables: var, final, const and when to use each
+  - Dart Null Safety: the ? operator, ??, ??= and why they prevent app crashes
+  - Control flow: if/else and Dart 3 switch expressions with pattern matching
+  - Build a working CLI Grade Calculator by the end of class
+
+* Why Dart? What Is Happening in the World
+#+ATTR_REVEAL: :frag (appear)
+  - Flutter & Dart are used by Google, Alibaba, BMW, eBay, and 1 million+ published apps
+  - Dart was designed specifically for UI development — it compiles to native ARM code, JavaScript, and WebAssembly
+  - Bangladesh's tech industry is growing 30% annually — Flutter devs are among the most in-demand skills
+  - Null safety is now the industry standard; Swift, Kotlin, and Rust all enforce it
+  - AI coding assistants like Claude Code make learning your first language faster than ever before

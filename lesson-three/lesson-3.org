@@ -1,0 +1,41 @@
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: serif
+#+HTML_HEAD: <style>.reveal{font-size:26px !important;}</style>
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+
+#+TITLE: Class 3 · Functions & OOP — CLI Quiz Question Engine
+#+AUTHOR: Shafiqur Rahman
+
+
+* Class 2 Recap — Loops & Collections
+#+ATTR_REVEAL: :frag (appear)
+  - Mastered for, while, and do-while loop patterns
+  - Built and manipulated List, Set, and Map with real data
+  - Used functional methods: .where(), .map(), .sort(), .any()
+  - Learned collection-if and collection-for for declarative list building
+  - Built an interactive CLI Student List Manager
+
+* OOP — Build the Brain of the Quiz App
+#+ATTR_REVEAL: :frag (appear)
+  - Enumeration, Classes and Objects
+  - Functions: positional, named, optional parameters and arrow => syntax
+  - Classes and objects: encapsulation, private fields with _
+  - Three constructor types: default, named, factory — and fromJson() pattern
+  - Inheritance (extends), interfaces (implements), and mixins (with)
+  - Abstract classes for shared contracts
+  - Build a QuizEngine class — the exact model used in our Flutter app later
+        
+* OOP Is the Language of Professional Software
+#+ATTR_REVEAL: :frag (appear)
+  - Flutter's entire SDK is built with OOP — understanding classes
+     is non-negotiable for reading Flutter docs
+  - The factory constructor pattern (fromJson) is used in every app that talks to an API
+  - Design patterns (MVC, MVVM, Clean Architecture) are all OOP patterns —
+    used at Google, Meta, and Pathao
+  - Dart's null-safe OOP is a safer version of Java/Kotlin OOP — concepts transfer directly to Android dev
+  - AI code generators produce OOP-heavy code; understanding classes helps you read and modify
+    AI output confidently
