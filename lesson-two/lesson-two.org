@@ -1,0 +1,37 @@
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: serif
+#+HTML_HEAD: <style>.reveal{font-size:26px !important;}</style>
+#+OPTIONS: timestamp:nil toc:nil num:nil 
+:END:
+
+
+#+TITLE: Class 2 · Loops & Collections — Student List Manager
+#+AUTHOR: Shafiqur Rahman
+
+* Class 1 Recap — Variables & Types
+#+ATTR_REVEAL: :frag (appear) 
+  - Declared variables with var, final, const — understanding the difference
+  - Learned Dart's core types: int, double, String, bool, and dynamic
+  - Used null-safe operators: ?, ??, ??=, and ?. for safe null handling
+  - Wrote if/else conditions and Dart 3 switch expressions
+  - Built a CLI Grade Calculator that reads student names and marks
+
+* Loops & Collections — The Data Structures of Every App
+#+ATTR_REVEAL: :frag (appear)
+  - Three loop types: for, while, do-while — and when to use each one
+  - List: Dart's most-used collection — add, remove, sort, filter, map
+  - Set: unique items only — perfect for tags, IDs, and deduplication
+  - Map: key-value storage — the backbone of every JSON response and user record
+  - Collection-if and collection-for: build lists declaratively
+  - Build an interactive CLI Student List Manager with full CRUD
+
+* Collections Power Every App You Use
+#+ATTR_REVEAL: :frag (appear)
+  - TikTok's video feed is a List; Instagram's hashtag search uses a Set; your Google profile is a Map
+  - JSON — the universal data format for all APIs — is always decoded into Dart Map
+  - Functional methods like .where(), .map(), .reduce() are used in 90% of professional Flutter code
+  - Bangladesh's RMG industry is digitising fast — inventory and HR systems all rely on these exact data structures
+  - Understanding collections is the single biggest skill jump from beginner to intermediate developer
+
