@@ -23,8 +23,8 @@
 </section>
 
 <section>
-<section id="slide-orga85162d">
-<h2 id="orga85162d">Welcome — This Is Day One</h2>
+<section id="slide-orgc8328a3">
+<h2 id="orgc8328a3">Welcome — This Is Day One</h2>
 <ul>
 <li class="fragment appear">This is the very first class of App Development with Flutter &amp; AI</li>
 <li class="fragment appear">By the end of this course you will have a real app published on Google Play Store and BDapps</li>
@@ -34,20 +34,96 @@
 </section>
 </section>
 <section>
-<section id="slide-org0aa23b1">
-<h2 id="org0aa23b1">Dart Fundamentals — Variables, Types &amp; Control Flow</h2>
-<ul>
-<li class="fragment appear">Master variables: var, final, const and when to use each</li>
-<li class="fragment appear">Dart Null Safety: the ? operator, ??, ??= and why they prevent app crashes</li>
-<li class="fragment appear">Control flow: if/else and Dart 3 switch expressions with pattern matching</li>
-<li class="fragment appear">Build a working CLI Grade Calculator by the end of class</li>
+<section id="slide-org1bfed8b">
+<h2 id="org1bfed8b">Dart Fundamentals — Variables, Types &amp; Control Flow</h2>
+</section>
+<section id="slide-org8f376eb">
+<h3 id="org8f376eb">Master variables: var, final, const and when to use each</h3>
+<div class="org-src-container">
 
-</ul>
+<pre  class="src src-dart"   ><code trim><span style="color: #6ae4b9;">void</span> main(){
+  <span style="color: #989898;">/// </span><span style="color: #989898;">var infers the type automatically
+</span>  <span style="color: #b6a0ff;">var</span> <span style="color: #00d3d0;">studentName</span> = <span style="color: #79a8ff;">'Rahim'</span>;  <span style="color: #989898;">// </span><span style="color: #989898;">String
+</span>  <span style="color: #b6a0ff;">var</span> <span style="color: #00d3d0;">marks</span>       = <span style="color: #00bcff;">87</span>;       <span style="color: #989898;">// </span><span style="color: #989898;">int
+</span>  <span style="color: #b6a0ff;">var</span> <span style="color: #00d3d0;">gpa</span>         = <span style="color: #00bcff;">3.85</span>;     <span style="color: #989898;">// </span><span style="color: #989898;">double
+</span>  <span style="color: #b6a0ff;">var</span> <span style="color: #00d3d0;">isEnrolled</span>  = <span style="color: #00bcff;">true</span>;     <span style="color: #989898;">// </span><span style="color: #989898;">bool
+</span>
+  <span style="color: #989898;">/// </span><span style="color: #989898;">final = assigned once at runtime
+</span>  <span style="color: #b6a0ff;">final</span> <span style="color: #6ae4b9;">String</span> <span style="color: #00d3d0;">school</span> = <span style="color: #79a8ff;">'BDapps Academy'</span>;
+
+  <span style="color: #989898;">/// </span><span style="color: #989898;">const = compile-time constant
+</span>  <span style="color: #b6a0ff;">const</span> <span style="color: #6ae4b9;">int</span> <span style="color: #00d3d0;">passMark</span> = <span style="color: #00bcff;">40</span>;
+}
+</code></pre>
+</div>
+</section>
+<section id="slide-org707e9ce">
+<h3 id="org707e9ce">Dart Null Safety: the ? operator, ??, ??= and why they prevent app crashes</h3>
+<div class="org-src-container">
+
+<pre  class="src src-dart"   ><code trim><span style="color: #6ae4b9;">void</span> main(){
+  <span style="color: #989898;">/// </span><span style="color: #989898;">Nullable type &#8212; can hold null
+</span>  <span style="color: #6ae4b9;">String</span>? grade; <span style="color: #989898;">// </span><span style="color: #989898;">grade is null right now
+</span>  grade = <span style="color: #79a8ff;">'A'</span>;   <span style="color: #989898;">// </span><span style="color: #989898;">now it has a value
+</span>
+  <span style="color: #989898;">/// </span><span style="color: #989898;">Null-aware operators
+</span>  <span style="color: #6ae4b9;">String</span> <span style="color: #00d3d0;">display</span> = grade ?? <span style="color: #79a8ff;">'Not graded'</span>; <span style="color: #989898;">// </span><span style="color: #989898;">?? = fallback if null
+</span>  print(<span style="color: #79a8ff;">'</span><span style="color: #00d3d0;">$studentName</span><span style="color: #79a8ff;"> scored </span><span style="color: #00d3d0;">$marks</span><span style="color: #79a8ff;"> &#8594; </span><span style="color: #00d3d0;">$display</span><span style="color: #79a8ff;">'</span>);
+  print(<span style="color: #79a8ff;">'School: </span><span style="color: #00d3d0;">$school</span><span style="color: #79a8ff;"> | Pass mark: </span><span style="color: #00d3d0;">$passMark</span><span style="color: #79a8ff;">'</span>);
+}
+</code></pre>
+</div>
+</section>
+<section id="slide-org526c577">
+<h3 id="org526c577">Control flow: if/else and Dart 3 switch expressions with pattern matching</h3>
+<div class="org-src-container">
+
+<pre  class="src src-dart"   ><code trim><span style="color: #6ae4b9;">void</span> main(){
+
+  <span style="color: #6ae4b9;">String</span> <span style="color: #feacd0;">getGradeFeedbackIf</span>(<span style="color: #6ae4b9;">int</span> <span style="color: #00d3d0;">score</span>) {
+    <span style="color: #b6a0ff;">if</span> (score &gt;= <span style="color: #00bcff;">90</span> &amp;&amp; score &lt;= <span style="color: #00bcff;">100</span>) {
+      <span style="color: #b6a0ff;">return</span> <span style="color: #79a8ff;">'Excellent! You got an A.'</span>;
+    } <span style="color: #b6a0ff;">else</span> <span style="color: #b6a0ff;">if</span> (score &gt;= <span style="color: #00bcff;">80</span> &amp;&amp; score &lt; <span style="color: #00bcff;">90</span>) {
+      <span style="color: #b6a0ff;">return</span> <span style="color: #79a8ff;">'Great job! You got a B.'</span>;
+    } <span style="color: #b6a0ff;">else</span> <span style="color: #b6a0ff;">if</span> (score &gt;= <span style="color: #00bcff;">70</span> &amp;&amp; score &lt; <span style="color: #00bcff;">80</span>) {
+      <span style="color: #b6a0ff;">return</span> <span style="color: #79a8ff;">'Good effort! You got a C.'</span>;
+    } <span style="color: #b6a0ff;">else</span> <span style="color: #b6a0ff;">if</span> (score &gt;= <span style="color: #00bcff;">0</span> &amp;&amp; score &lt; <span style="color: #00bcff;">70</span>) {
+      <span style="color: #b6a0ff;">return</span> <span style="color: #79a8ff;">'Needs improvement. You got an F.'</span>;
+    } <span style="color: #b6a0ff;">else</span> {
+      <span style="color: #b6a0ff;">return</span> <span style="color: #79a8ff;">'Invalid score provided.'</span>;
+    }
+  }
+
+  print(<span style="color: #79a8ff;">"Grade is: </span><span style="color: #00d3d0;">${getGradeFeedbackIf(80)}</span><span style="color: #79a8ff;">"</span>);
+}
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org298ee53">
+<h3 id="org298ee53">Build a working CLI Grade Calculator by the end of class</h3>
+<div class="org-src-container">
+
+<pre  class="src src-dart"   ><code trim><span style="color: #6ae4b9;">void</span> main(){
+  <span style="color: #6ae4b9;">String</span> <span style="color: #feacd0;">getGradeFeedbackSwitch</span>(<span style="color: #6ae4b9;">int</span> <span style="color: #00d3d0;">score</span>) {
+    <span style="color: #b6a0ff;">return</span> <span style="color: #b6a0ff;">switch</span> (score) {
+      &gt;= <span style="color: #00bcff;">90</span> &amp;&amp; &lt;= <span style="color: #00bcff;">100</span> =&gt; <span style="color: #79a8ff;">'Excellent! You got an A.'</span>,
+      &gt;= <span style="color: #00bcff;">80</span> &amp;&amp; &lt; <span style="color: #00bcff;">90</span>   =&gt; <span style="color: #79a8ff;">'Great job! You got a B.'</span>,
+      &gt;= <span style="color: #00bcff;">70</span> &amp;&amp; &lt; <span style="color: #00bcff;">80</span>   =&gt; <span style="color: #79a8ff;">'Good effort! You got a C.'</span>,
+      &gt;= <span style="color: #00bcff;">0</span> &amp;&amp; &lt; <span style="color: #00bcff;">70</span>    =&gt; <span style="color: #79a8ff;">'Needs improvement. You got an F.'</span>,
+      _               =&gt; <span style="color: #79a8ff;">'Invalid score provided.'</span>, <span style="color: #989898;">// </span><span style="color: #989898;">Default wildcard case
+</span>    };
+  }
+
+  print(<span style="color: #79a8ff;">"Grade is: </span><span style="color: #00d3d0;">${getGradeFeedbackSwitch(90)}</span><span style="color: #79a8ff;">"</span>);
+}
+</code></pre>
+</div>
 </section>
 </section>
 <section>
-<section id="slide-orgd5ba9c8">
-<h2 id="orgd5ba9c8">Why Dart? What Is Happening in the World</h2>
+<section id="slide-orgb3e5d3c">
+<h2 id="orgb3e5d3c">Why Dart? What Is Happening in the World</h2>
 <ul>
 <li class="fragment appear">Flutter &amp; Dart are used by Google, Alibaba, BMW, eBay, and 1 million+ published apps</li>
 <li class="fragment appear">Dart was designed specifically for UI development — it compiles to native ARM code, JavaScript, and WebAssembly</li>

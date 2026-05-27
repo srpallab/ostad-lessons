@@ -16,9 +16,10 @@
   - By the end of this course you will have a real app published on Google Play Store and BDapps
   - Today we dive straight into Dart, the language that powers Flutter
 
+
 * Dart Fundamentals — Variables, Types & Control Flow
 #+ATTR_REVEAL: :frag (appear)
-  - Master variables: var, final, const and when to use each
+** Master variables: var, final, const and when to use each
     #+BEGIN_SRC dart
       void main(){
         /// var infers the type automatically
@@ -34,7 +35,7 @@
         const int passMark = 40;
       }
     #+END_SRC
-  - Dart Null Safety: the ? operator, ??, ??= and why they prevent app crashes
+** Dart Null Safety: the ? operator, ??, ??= and why they prevent app crashes
     #+BEGIN_SRC dart
       void main(){
         /// Nullable type — can hold null
@@ -47,8 +48,45 @@
         print('School: $school | Pass mark: $passMark');
       }
 #+END_SRC
-  - Control flow: if/else and Dart 3 switch expressions with pattern matching
-  - Build a working CLI Grade Calculator by the end of class
+** Control flow: if/else and Dart 3 switch expressions with pattern matching
+#+BEGIN_SRC dart
+  void main(){
+
+    String getGradeFeedbackIf(int score) {
+      if (score >= 90 && score <= 100) {
+        return 'Excellent! You got an A.';
+      } else if (score >= 80 && score < 90) {
+        return 'Great job! You got a B.';
+      } else if (score >= 70 && score < 80) {
+        return 'Good effort! You got a C.';
+      } else if (score >= 0 && score < 70) {
+        return 'Needs improvement. You got an F.';
+      } else {
+        return 'Invalid score provided.';
+      }
+    }
+
+    print("Grade is: ${getGradeFeedbackIf(80)}");
+  }
+
+#+END_SRC
+** Build a working CLI Grade Calculator by the end of class
+#+BEGIN_SRC dart
+  void main(){
+    String getGradeFeedbackSwitch(int score) {
+      return switch (score) {
+        >= 90 && <= 100 => 'Excellent! You got an A.',
+        >= 80 && < 90   => 'Great job! You got a B.',
+        >= 70 && < 80   => 'Good effort! You got a C.',
+        >= 0 && < 70    => 'Needs improvement. You got an F.',
+        _               => 'Invalid score provided.', // Default wildcard case
+      };
+    }
+
+    print("Grade is: ${getGradeFeedbackSwitch(90)}");
+  }
+#+END_SRC
+
 
 * Why Dart? What Is Happening in the World
 #+ATTR_REVEAL: :frag (appear)
