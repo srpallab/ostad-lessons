@@ -1,6 +1,6 @@
 #+TITLE: Ostad Class Lessons
 #+AUTHOR: Shafiqur Rahman
 
-* Class One: [[https://srpallab.github.io/ostad-lessons/lesson-three/lesson-three.html][Lesson One Slide]]
+* Class One: [[https://srpallab.github.io/ostad-lessons/lesson-one/lesson-one.html][Lesson One Slide]]
 * Class Two: [[https://srpallab.github.io/ostad-lessons/lesson-two/lesson-two.html][Lesson Two Slide]]
 * Class Three: [[https://srpallab.github.io/ostad-lessons/lesson-three/lesson-three.html][Lesson Three Slide]]

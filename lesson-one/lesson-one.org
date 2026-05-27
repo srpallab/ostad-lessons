@@ -19,7 +19,34 @@
 * Dart Fundamentals — Variables, Types & Control Flow
 #+ATTR_REVEAL: :frag (appear)
   - Master variables: var, final, const and when to use each
+    #+BEGIN_SRC dart
+      void main(){
+        /// var infers the type automatically
+        var studentName = 'Rahim';  // String
+        var marks       = 87;       // int
+        var gpa         = 3.85;     // double
+        var isEnrolled  = true;     // bool
+
+        /// final = assigned once at runtime
+        final String school = 'BDapps Academy';
+
+        /// const = compile-time constant
+        const int passMark = 40;
+      }
+    #+END_SRC
   - Dart Null Safety: the ? operator, ??, ??= and why they prevent app crashes
+    #+BEGIN_SRC dart
+      void main(){
+        /// Nullable type — can hold null
+        String? grade; // grade is null right now
+        grade = 'A';   // now it has a value
+
+        /// Null-aware operators
+        String display = grade ?? 'Not graded'; // ?? = fallback if null
+        print('$studentName scored $marks → $display');
+        print('School: $school | Pass mark: $passMark');
+      }
+#+END_SRC
   - Control flow: if/else and Dart 3 switch expressions with pattern matching
   - Build a working CLI Grade Calculator by the end of class
 
